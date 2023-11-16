@@ -6,5 +6,5 @@ metadata:
   name: "{{ include "cronjobs.releaseName" $ }}-{{ $job.name }}"
   namespace: {{ $job.namespace }}
 data:
-  config: {{ $job.config }}
+  config: "test" #"{{ $job.config }}
 {{- end }}
