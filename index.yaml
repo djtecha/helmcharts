@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  cronjob:
+  - apiVersion: v2
+    created: "2023-11-16T18:09:57.926898194Z"
+    description: Cluster cronjobs
+    digest: a2864c77f5d9c05bd64f345972bfc500356d36ac1d1e74d79225a8253a2a0422
+    home: https://github.com/djtecha/helmcharts
+    keywords:
+    - cron
+    maintainers:
+    - email: djtecha@gmail.com
+      name: djtecha
+    name: cronjob
+    sources:
+    - https://github.com/djtecha/helmcharts
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/cronjob-1.0.3/cronjob-1.0.3.tgz
+    version: 1.0.3
+generated: "2023-11-16T18:09:57.926909014Z"
