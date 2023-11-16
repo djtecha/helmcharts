@@ -6,3 +6,4 @@ metadata:
   name: "{{ include "cronjobs.releaseName" $ }}-{{ $job.name }}"
 data:
   config: {{ $job.config }}
+{{- end }}
