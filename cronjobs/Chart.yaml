@@ -1,0 +1,12 @@
+apiVersion: v2
+name: cronjob
+description: Cluster cronjobs
+version: 1.0.1
+keywords:
+  - cron
+home: "https://github.com/djtecha/helmcharts"
+sources:
+  - "https://github.com/djtecha/helmcharts"
+maintainers:
+  - name: djtecha
+    email: djtecha@gmail.com

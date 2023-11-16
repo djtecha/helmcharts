@@ -1,0 +1,14 @@
+{{- range $job := .Values.jobs }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  namespace: {{ $job.namespace }}
+  name: "{{ include "cronjobs.releaseName" $ }}-{{ $job.name }}"
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+{{- end }}
