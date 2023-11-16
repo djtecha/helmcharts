@@ -1,7 +1,7 @@
 apiVersion: v2
 name: cronjob
 description: Cluster cronjobs
-version: 1.0.6
+version: 1.0.7
 keywords:
   - cron
 home: "https://github.com/djtecha/helmcharts"
