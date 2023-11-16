@@ -7,5 +7,4 @@ metadata:
   namespace: {{ $job.namespace }}
 data:
   company: {{ $job.config.company }}
-  recipients: {{ $job.config.recipients }}
 {{- end }}
