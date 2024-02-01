@@ -1,4 +1,5 @@
-jobs: {}
+jobs:
+  timeZone: "Etc/UTC"
 #  - name: reader
 #    namespace: default
 #    image:

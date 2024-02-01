@@ -85,5 +85,6 @@ spec:
 {{ toYaml . | indent 12 }}
           {{- end }}
   schedule: {{ $job.schedule | quote }}
+  timeZone: {{ $job.timeZone | quote }}
   successfulJobsHistoryLimit: {{ $job.successfulJobsHistoryLimit }}
 {{- end }}
