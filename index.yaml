@@ -195,6 +195,15 @@ entries:
     version: 1.0.3
   freedns-webhook:
   - apiVersion: v1
+    appVersion: 2024.11.02.05
+    created: "2024-11-19T17:30:55.132391718Z"
+    description: A FreeDNS webhook dns01 solver for cert-manager
+    digest: 2ac19c763a40a973a0001a793b0a8fee482694320fc1630bdbfb9975ad7862eb
+    name: freedns-webhook
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/freedns-webhook-0.1.1/freedns-webhook-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
     appVersion: "1.0"
     created: "2023-11-16T21:28:11.117665769Z"
     description: A Helm chart for Kubernetes
@@ -203,4 +212,4 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/freedns-webhook-0.1.0/freedns-webhook-0.1.0.tgz
     version: 0.1.0
-generated: "2024-02-01T17:42:05.004341066Z"
+generated: "2024-11-19T17:30:55.132466798Z"
