@@ -193,6 +193,16 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/cronjob-1.0.3/cronjob-1.0.3.tgz
     version: 1.0.3
+  freedns:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2024-11-19T18:11:53.138465777Z"
+    description: A Helm chart for Kubernetes
+    digest: 4a254c519eaa5c224d13202d7aad13fb4cd93baf9c9390bd73367677cb7bb09e
+    name: freedns
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/freedns-0.1.1/freedns-0.1.1.tgz
+    version: 0.1.1
   freedns-webhook:
   - apiVersion: v1
     appVersion: 2024.11.02.05
@@ -221,4 +231,4 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/freedns-webhook-0.1.0/freedns-webhook-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-19T17:54:59.725412576Z"
+generated: "2024-11-19T18:11:53.138516973Z"
