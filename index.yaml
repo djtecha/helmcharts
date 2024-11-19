@@ -196,6 +196,15 @@ entries:
   freedns-webhook:
   - apiVersion: v1
     appVersion: 2024.11.02.05
+    created: "2024-11-19T17:54:59.725377912Z"
+    description: A FreeDNS webhook dns01 solver for cert-manager
+    digest: 6e1dbc7dca685a859bdb1e8b4e69c31e3fbe2dfd04a648af0b56aa82658077f0
+    name: freedns-webhook
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/freedns-webhook-0.1.2/freedns-webhook-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: 2024.11.02.05
     created: "2024-11-19T17:30:55.132391718Z"
     description: A FreeDNS webhook dns01 solver for cert-manager
     digest: 2ac19c763a40a973a0001a793b0a8fee482694320fc1630bdbfb9975ad7862eb
@@ -212,4 +221,4 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/freedns-webhook-0.1.0/freedns-webhook-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-19T17:30:55.132466798Z"
+generated: "2024-11-19T17:54:59.725412576Z"
