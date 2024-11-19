@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "2024.11.02.05"
 description: A FreeDNS webhook dns01 solver for cert-manager
 name: freedns-webhook
-version: 0.1.1
+version: 0.1.2
