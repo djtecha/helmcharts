@@ -1,0 +1,3 @@
+[submodule "charts/webhook-freedns"]
+	path = charts/webhook-freedns
+	url = https://github.com/tgckpg/cert-manager-webhook-freedns.git
