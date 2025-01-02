@@ -231,4 +231,18 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/freedns-webhook-0.1.0/freedns-webhook-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-19T18:11:53.138516973Z"
+  open-plaato-keg:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2025-01-02T18:51:39.529400886Z"
+    description: A Helm chart for open-plaato-keg
+    digest: b24f7cb143a701c0235daeb4d24e504afb9e42601cab53c814be6deece42c73b
+    maintainers:
+    - email: djtecha@gmail.com
+      name: djtecha
+    name: open-plaato-keg
+    type: application
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/open-plaato-keg-0.1.0/open-plaato-keg-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-01-02T18:51:39.529442644Z"
