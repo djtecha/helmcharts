@@ -3,7 +3,7 @@ name: open-plaato-keg
 description: A Helm chart for open-plaato-keg
 type: application
 version: 0.1.0
-appVersion: "1.16.0"
+appVersion: "0.0.9"
 maintainers:
   - email: djtecha@gmail.com
     name: djtecha

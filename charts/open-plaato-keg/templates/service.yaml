@@ -7,11 +7,11 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.keg_listener_port }}
+    - port: {{ .Values.service.keg.port }}
       targetPort: http
       protocol: TCP
-      name: http
-    - port: { { .Values.service.http_listener_port } }
+      name: keg
+    - port: {{ .Values.service.http.port }}
       targetPort: http
       protocol: TCP
       name: http
