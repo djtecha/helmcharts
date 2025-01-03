@@ -233,6 +233,19 @@ entries:
     version: 0.1.0
   open-plaato-keg:
   - apiVersion: v2
+    appVersion: 0.0.9
+    created: "2025-01-03T22:44:31.96060743Z"
+    description: A Helm chart for open-plaato-keg
+    digest: 8a417d0576f9c275b273871c0ee4ea8bce0650ccc65dd2e15eba199b1a1af672
+    maintainers:
+    - email: djtecha@gmail.com
+      name: djtecha
+    name: open-plaato-keg
+    type: application
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/open-plaato-keg-0.1.1/open-plaato-keg-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     appVersion: 1.16.0
     created: "2025-01-02T18:51:39.529400886Z"
     description: A Helm chart for open-plaato-keg
@@ -245,4 +258,4 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/open-plaato-keg-0.1.0/open-plaato-keg-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-02T18:51:39.529442644Z"
+generated: "2025-01-03T22:44:31.960639731Z"
