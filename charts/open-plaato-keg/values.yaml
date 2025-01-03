@@ -80,6 +80,12 @@ affinity:
               values:
                 - amd64
 
+existingSecrets: "{{ .Release.Name }}-app"
+
+barhelperPassword:
+  value: ""
+mqttPassword:
+  value: ""
 
 env:
   - name: DATABASE_FILE_PATH
@@ -94,15 +100,21 @@ env:
     value: "192.168.0.123"
   - name: MQTT_PORT
     value: "1883"
-  - name: MQTT_USERNAME
-    value: ""
-  - name: MQTT_PASSWORD
-    value: ""
   - name: MQTT_CLIENT
     value: "open_plaato_keg"
   - name: BARHELPER_ENABLED
     value: "false"
-  - name: BARHELPER_API_KEY
-    value: ""
   - name: BARHELPER_KEG_MONITOR_MAPPING
     value: "plaato-auth-key:barhelper-custom-keg-monitor-id"
+  - name: MQTT_USERNAME
+    value: ""
+  - name: MQTT_PASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: plaato-open-plaato-keg
+        key: MQTT_PASSWORD
+  - name: BARHELPER_API_KEY
+    valueFrom:
+      secretKeyRef:
+        name: plaato-open-plaato-keg
+        key: BARHELPER_API_KEY
