@@ -80,7 +80,7 @@ affinity:
               values:
                 - amd64
 
-existingSecrets: "{{ .Release.Name }}-app"
+existingSecrets: "open-plaato-keg"
 
 barhelperPassword:
   value: ""
@@ -111,10 +111,10 @@ env:
   - name: MQTT_PASSWORD
     valueFrom:
       secretKeyRef:
-        name: plaato-open-plaato-keg
+        name: open-plaato-keg
         key: MQTT_PASSWORD
   - name: BARHELPER_API_KEY
     valueFrom:
       secretKeyRef:
-        name: plaato-open-plaato-keg
+        name: open-plaato-keg
         key: BARHELPER_API_KEY
