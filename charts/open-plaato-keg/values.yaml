@@ -87,12 +87,15 @@ affinity:
                 - amd64
 
 persistence:
-  db:
-    enabled: true
-    size: 1Gi
-    accessModes:
-      - ReadWriteMany
-    path: "/db"
+  storageClass: ""
+  existingClaim: ""
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  # if you need any additional volumes, you can define them here
+  additionalVolumes: []
+  # if you need any additional volume mounts, you can define them here
+  additionalMounts: []
 
 existingSecrets: "open-plaato-keg"
 
