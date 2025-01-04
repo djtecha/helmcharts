@@ -60,3 +60,14 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/*
+Persistent Volumes and Mounts to use
+*/}}
+{{- define "persistentVolumes" -}}
+  {{- range $i, $value := .Values.persistence }}
+    - name: {{ $.Release.Name }}-{{ $i }}
+      persistentVolumeClaim:
+        claimName: {{ $.Release.Name }}-{{ $i }}
+  {{- end }}
+{{- end }}

@@ -24,7 +24,9 @@ podLabels: {}
 
 podSecurityContext: {}
 
-securityContext: {}
+securityContext:
+  runAsUser: 0
+  runAsGroup: 0
 
 service:
   http:
@@ -62,9 +64,13 @@ autoscaling:
   maxReplicas: 100
   targetCPUUtilizationPercentage: 80
 
-volumes: []
-
-volumeMounts: []
+volumes:
+  - name: plaato-db
+    persistentVolumeClaim:
+      claimName: plaato-db
+volumeMounts:
+  - mountPath: "/db"
+    name: plaato-db
 
 nodeSelector: {}
 
@@ -79,6 +85,14 @@ affinity:
               operator: In
               values:
                 - amd64
+
+persistence:
+  db:
+    enabled: true
+    size: 1Gi
+    accessModes:
+      - ReadWriteMany
+    path: "/db"
 
 existingSecrets: "open-plaato-keg"
 

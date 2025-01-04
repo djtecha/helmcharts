@@ -1,0 +1,14 @@
+{{- range $i, $value := .Values.persistence }}
+{{- if eq (default .enabled false) true }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ $.Release.Name }}-{{ $i }}
+spec:
+  storageClassName: {{ .storageClassName }}
+  accessModes: {{ .accessModes | toYaml | nindent 2 }}
+  resources:
+    requests:
+      storage: {{ .size | quote }}
+{{- end -}}
+{{- end -}}
