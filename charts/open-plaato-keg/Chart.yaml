@@ -2,7 +2,7 @@ apiVersion: v2
 name: open-plaato-keg
 description: A Helm chart for open-plaato-keg
 type: application
-version: 0.1.1
+version: 0.1.2
 appVersion: "0.0.9"
 maintainers:
   - email: djtecha@gmail.com

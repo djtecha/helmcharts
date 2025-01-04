@@ -8,11 +8,11 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.keg.port }}
-      targetPort: http
+      targetPort: {{ .Values.service.keg.port }}
       protocol: TCP
       name: keg
     - port: {{ .Values.service.http.port }}
-      targetPort: http
+      targetPort: {{ .Values.service.http.port }}
       protocol: TCP
       name: http
   selector:
