@@ -51,11 +51,11 @@ resources: {}
 
 livenessProbe:
   httpGet:
-    path: /index.html
+    path: /api/alive
     port: http
 readinessProbe:
   httpGet:
-    path: /index.html
+    path: /api/alive
     port: http
 
 autoscaling:
