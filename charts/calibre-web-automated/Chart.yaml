@@ -2,8 +2,8 @@ apiVersion: v2
 name: calibre-web-automated
 description: A Helm chart for calibre-web-automated
 type: application
-version: 0.1.1
-appVersion: "V2.1.2"
+version: 0.1.2
+appVersion: "dev"
 maintainers:
   - email: djtecha@gmail.com
     name: djtecha
