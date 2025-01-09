@@ -1,5 +1,19 @@
 apiVersion: v1
 entries:
+  calibre-web-automated:
+  - apiVersion: v2
+    appVersion: dev
+    created: "2025-01-09T20:06:28.890329557Z"
+    description: A Helm chart for calibre-web-automated
+    digest: 760bc8253162fcd3413e3d864fe3d44ecf0c69fa46e7ab9348cb022ab3096ffb
+    maintainers:
+    - email: djtecha@gmail.com
+      name: djtecha
+    name: calibre-web-automated
+    type: application
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/calibre-web-automated-0.1.2/calibre-web-automated-0.1.2.tgz
+    version: 0.1.2
   cronjob:
   - apiVersion: v2
     created: "2024-02-01T17:42:05.004293067Z"
@@ -284,4 +298,4 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/open-plaato-keg-0.1.0/open-plaato-keg-0.1.0.tgz
     version: 0.1.0
-generated: "2025-01-04T22:22:28.912315889Z"
+generated: "2025-01-09T20:06:28.890377488Z"
