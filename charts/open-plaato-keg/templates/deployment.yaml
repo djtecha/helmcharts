@@ -56,9 +56,9 @@ spec:
           volumeMounts:
            - mountPath: /db
              name: config
-           {{- if .Values.persistence.additionalMounts }}
-             {{- .Values.persistence.additionalMounts | toYaml | nindent 12 }}
-           {{- end }}
+            {{- if .Values.persistence.additionalMounts }}
+            {{- toYaml .Values.persistence.additionalMounts | nindent 12 }}
+            {{- end }}
       volumes:
         - name: config
           {{- if .Values.persistence.enabled }}

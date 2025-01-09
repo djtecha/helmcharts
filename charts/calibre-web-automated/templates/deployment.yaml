@@ -49,11 +49,11 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-           - mountPath: /config
-             name: config
-           {{- if .Values.persistence.additionalMounts }}
-             {{- .Values.persistence.additionalMounts | toYaml | nindent 12 }}
-           {{- end }}
+            - name: config
+              mountPath: /config
+            {{- if .Values.persistence.additionalMounts }}
+            {{- toYaml .Values.persistence.additionalMounts | nindent 12 }}
+            {{- end }}
       volumes:
         - name: config
           {{- if .Values.persistence.enabled }}

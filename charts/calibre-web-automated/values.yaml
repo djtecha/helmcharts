@@ -64,8 +64,15 @@ persistence:
   enabled: true
   accessMode: ReadWriteOnce
   size: 1Gi
-  additionalVolumes: []
-  additionalMounts: []
+  additionalVolumes:
+    - name: nfs
+      nfs:
+        server: nfs.hiddennode.us
+        path: /storage02/media
+        readOnly: true
+  additionalMounts:
+    - name: nfs
+      mountPath: "/storage02/media"
 
 env:
   - name: TZ
