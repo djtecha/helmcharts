@@ -6,7 +6,13 @@ metadata:
   labels:
     {{- include "calibre-web-automated.labels" . | nindent 4 }}
 spec:
-  storageClassName: {{ .Values.persistence.storageClass | quote }}
+  {{- if .Values.persistence.storageClass }}
+  {{- if (eq "-" .Values.persistence.storageClass) }}
+  storageClassName: ""
+  {{- else }}
+  storageClassName: "{{ .Values.persistence.storageClass }}"
+  {{- end }}
+  {{- end }}
   accessModes:
     - {{ .Values.persistence.accessMode | quote }}
   resources:
