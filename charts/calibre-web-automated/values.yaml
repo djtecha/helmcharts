@@ -61,21 +61,14 @@ affinity: {}
 persistence:
   storageClass: ""
   existingClaim: ""
-  enabled: true
+  enabled: false
   accessMode: ReadWriteOnce
-  size: 1Gi
-  additionalVolumes:
-    - name: nfs
-      nfs:
-        server: nfs.hiddennode.us
-        path: /storage02/media
-        readOnly: true
-  additionalMounts:
-    - name: nfs
-      mountPath: "/storage02/media"
+  size: ""
+  additionalVolumes: []
+  additionalMounts: []
 
 env:
   - name: TZ
     value: "UTC"
-#  - name: DOCKER_MODS
-#    value: "lscr.io/linuxserver/mods:universal-calibre-v7.16.0"
+  - name: DOCKER_MODS
+    value: "lscr.io/linuxserver/mods:universal-calibre-v7.16.0"
