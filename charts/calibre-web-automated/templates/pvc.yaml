@@ -2,9 +2,9 @@
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
-  name: {{ include "open-plaato-keg.fullname" . }}
+  name: {{ include "calibre-web-automated.fullname" . }}
   labels:
-    {{- include "open-plaato-keg.labels" . | nindent 4 }}
+    {{- include "calibre-web-automated.labels" . | nindent 4 }}
 spec:
   storageClassName: {{ .Values.persistence.storageClass | quote }}
   accessModes:
