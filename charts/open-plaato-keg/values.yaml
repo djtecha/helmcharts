@@ -123,6 +123,8 @@ env:
     value: "false"
   - name: BARHELPER_KEG_MONITOR_MAPPING
     value: "plaato-auth-key:barhelper-custom-keg-monitor-id"
+  - BARHELPER_ENDPOINT:
+    value: "https://europe-west1-barhelper-app.cloudfunctions.net/api/customKegMon"
   - name: MQTT_USERNAME
     value: ""
   - name: MQTT_PASSWORD
