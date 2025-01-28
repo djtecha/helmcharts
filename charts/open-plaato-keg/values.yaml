@@ -121,6 +121,8 @@ env:
     value: "open_plaato_keg"
   - name: BARHELPER_ENABLED
     value: "false"
+  - name: BARHELPER_UNIT
+    value: "l"
   - name: BARHELPER_KEG_MONITOR_MAPPING
     value: "plaato-auth-key:barhelper-custom-keg-monitor-id"
   - name: BARHELPER_ENDPOINT
