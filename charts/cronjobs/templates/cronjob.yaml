@@ -14,9 +14,9 @@ spec:
       template:
         metadata:
           labels:
-            {{- with $job.labels }}
-            {{ toYaml . | indent 12 }}
-            {{- end }}
+            tags.datadoghq.com/service: {{ $job.name }}
+            tags.datadoghq.com/env: "prod"
+            tags.datadoghq.com/version: "{{ $job.image.tag }}"
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
           imagePullSecrets:
