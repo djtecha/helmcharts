@@ -15,7 +15,7 @@ spec:
         metadata:
           labels:
             {{- with $job.labels }}
-            {{ toYaml . | indent 8 }}
+            {{ toYaml . | indent 12 }}
             {{- end }}
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
