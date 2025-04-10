@@ -12,11 +12,6 @@ spec:
   jobTemplate:
     spec:
       template:
-        metadata:
-          labels:
-            app: {{ include "cronjobs.releaseName" $ }}
-            cron: {{ $job.name }}
-            service: {{ $job.name }}
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
           imagePullSecrets:
@@ -40,6 +35,10 @@ spec:
             fsGroup: {{ $job.securityContext.fsGroup }}
             {{- end }}
           {{- end }}
+        {{- with $job.labels }}
+        labels:
+        {{ toYaml . | indent 8 }}
+        {{- end }}
         {{- end }}
           containers:
           - image: "{{ $job.image.repository }}:{{ $job.image.tag }}"
