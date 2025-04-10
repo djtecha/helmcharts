@@ -17,9 +17,6 @@ spec:
             app: {{ include "cronjobs.releaseName" $ }}
             cron: {{ $job.name }}
             service: {{ $job.name }}
-            { { toYaml . | indent 8 } }
-            { { - end } }
-            { { - with $job.labels } }
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
           imagePullSecrets:
