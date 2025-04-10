@@ -10,11 +10,11 @@ spec:
   concurrencyPolicy: {{ $job.concurrencyPolicy }}
   failedJobsHistoryLimit: {{ $job.failedJobsHistoryLimit }}
   jobTemplate:
-    metadata:
-      labels:
-        test: "testy"
     spec:
       template:
+        metadata:
+          labels:
+            test: "testy"
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
           imagePullSecrets:
