@@ -29,6 +29,22 @@ entries:
     version: 0.1.2
   cronjob:
   - apiVersion: v2
+    created: "2025-04-10T20:32:42.215850494Z"
+    description: Cluster cronjobs
+    digest: ee1fe35650e82ae504b4686d24953a495ff8c430803d9e21e9dbc40444a2096d
+    home: https://github.com/djtecha/helmcharts
+    keywords:
+    - cron
+    maintainers:
+    - email: djtecha@gmail.com
+      name: djtecha
+    name: cronjob
+    sources:
+    - https://github.com/djtecha/helmcharts
+    urls:
+    - https://github.com/djtecha/helmcharts/releases/download/cronjob-1.0.29/cronjob-1.0.29.tgz
+    version: 1.0.29
+  - apiVersion: v2
     created: "2025-04-10T20:26:20.073765313Z"
     description: Cluster cronjobs
     digest: e0e45cb5801fb79edf9793d53b94a6cb39eee7b7426c3e7a4172d71f86ab81e5
@@ -529,4 +545,4 @@ entries:
     urls:
     - https://github.com/djtecha/helmcharts/releases/download/open-plaato-keg-0.1.0/open-plaato-keg-0.1.0.tgz
     version: 0.1.0
-generated: "2025-04-10T20:26:20.074009067Z"
+generated: "2025-04-10T20:32:42.216252696Z"
