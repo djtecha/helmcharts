@@ -5,7 +5,7 @@ kind: CronJob
 metadata:
   name: "{{ include "cronjobs.releaseName" $ }}-{{ $job.name }}"
   labels:
-    {{- include "cronjobs.labels" $ | nindent 4 }}
+    {{- include "job.labels" $ | nindent 4 }}
 spec:
   concurrencyPolicy: {{ $job.concurrencyPolicy }}
   failedJobsHistoryLimit: {{ $job.failedJobsHistoryLimit }}
