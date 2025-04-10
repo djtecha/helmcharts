@@ -13,7 +13,10 @@ spec:
     spec:
       template:
         metadata:
-          labels: {{ $job.labels | toYaml | indent 8 }}
+          labels:
+            {{- with $job.labels }}
+            {{ toYaml . | indent 8 }}
+            {{- end }}
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
           imagePullSecrets:
