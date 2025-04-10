@@ -10,13 +10,13 @@ spec:
   concurrencyPolicy: {{ $job.concurrencyPolicy }}
   failedJobsHistoryLimit: {{ $job.failedJobsHistoryLimit }}
   jobTemplate:
+    {{ - with $job.labels }}
+    metadata:
+      labels:
+      {{ toYaml . | indent 4 }}
+    {{ - end }}
     spec:
       template:
-        {{ - with $job.labels }}
-        metadata:
-          labels:
-          {{ toYaml . | indent 8 }}
-        {{- end }}
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
           imagePullSecrets:
