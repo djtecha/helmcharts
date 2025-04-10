@@ -36,9 +36,10 @@ spec:
             {{- end }}
           {{- end }}
         {{- with $job.labels }}
-        labels:
-        {{ toYaml . | indent 8 }}
-        {{- end }}
+          metadata:
+            labels:
+            {{ toYaml . | indent 12 }}
+            {{- end }}
         {{- end }}
           containers:
           - image: "{{ $job.image.repository }}:{{ $job.image.tag }}"
