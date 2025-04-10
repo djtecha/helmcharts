@@ -12,6 +12,11 @@ spec:
   jobTemplate:
     spec:
       template:
+        {{ - with $job.labels }}
+        metadata:
+          labels:
+          {{ toYaml . | indent 8 }}
+        {{- end }}
         spec:
         {{- if hasKey $job "imagePullSecrets" }}
           imagePullSecrets:
@@ -35,11 +40,6 @@ spec:
             fsGroup: {{ $job.securityContext.fsGroup }}
             {{- end }}
           {{- end }}
-        {{- with $job.labels }}
-          metadata:
-            labels:
-            {{ toYaml . | indent 12 }}
-            {{- end }}
         {{- end }}
           containers:
           - image: "{{ $job.image.repository }}:{{ $job.image.tag }}"
